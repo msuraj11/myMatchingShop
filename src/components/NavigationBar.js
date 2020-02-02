@@ -1,8 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 import images from "../mediaFiles/images.jpg";
+import {filteredDataAction} from '../actions/loadAction';
 
-export const NavigationBar = () => {
+const NavigationBar = (props) => {
+
+  const handleChange = event => {
+    let userInput = event.target.value;
+    const allItems = props.allProducts;
+
+    const filteredItems = allItems.filter(item => {
+      return item.name.toLowerCase().search(userInput.toLowerCase()) !== -1;
+    });
+    props.filteredData(filteredItems);
+  };
+
   return (
     <div className="fixed-top">
       <div className="align-baseline">
@@ -29,6 +42,7 @@ export const NavigationBar = () => {
             className="form-control col-sm-7 mt-1"
             type="text"
             placeholder="Search"
+            onChange={handleChange}
           />
           <ul className="nav nav-pills" align="right">
             <li className="nav-item">
@@ -54,3 +68,15 @@ export const NavigationBar = () => {
     </div>
   );
 };
+
+const mapStateToProps = state => {
+  return {
+    allProducts : state.productData.repo_data
+  };
+};
+
+const mapDispatchToProps = {
+  filteredData : filteredDataAction
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavigationBar);

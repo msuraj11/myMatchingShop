@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../styles/App.css";
-import { NavigationBar } from "../components/NavigationBar";
+import NavigationBar from "../components/NavigationBar";
 import { Menu } from "../components/Menu";
 import Products from "../components/products";
 import { Footer } from "../components/footer";
@@ -10,7 +10,7 @@ import { BrowserRouter, Switch } from "react-router-dom";
 class App extends Component {
   render() {
     return (
-      <div className="productsbg">
+      <div className="app-bg">
         <BrowserRouter>
           <div>
             <NavigationBar />

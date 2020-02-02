@@ -1,6 +1,12 @@
 import * as actionTypes from "../constants/actionTypes";
 
-export const jsonData = response => ({
-  type: actionTypes.JSON_DATA,
-  payload: response
+export const jsonData = url => ({
+  type: actionTypes.LOADING,
+  payload: url
+});
+
+
+export const filteredDataAction = filteredItems => ({
+  type: actionTypes.JSON_DATA_RECEIVED,
+  payload: filteredItems
 });
