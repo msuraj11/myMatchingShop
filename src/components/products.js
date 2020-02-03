@@ -17,8 +17,8 @@ class Products extends Component {
               <img src={load} alt="Loading.." />
             </div>
           ) : (
-            this.props.productData &&
-            this.props.productData.map((list, i) => {
+            this.props.filteredData &&
+            this.props.filteredData.map((list, i) => {
               return (
                 <div className="col-md-3 mt-5">
                   <div key={list.productId}>
@@ -61,7 +61,8 @@ class Products extends Component {
 const mapStateToProps = state => {
   return {
     productData: state.productData.repo_data,
-    loader: state.productData.loader
+    loader: state.productData.loader,
+    filteredData: state.productData.filtered_data
   };
 };
 

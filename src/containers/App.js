@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import "../styles/App.css";
 import NavigationBar from "../components/NavigationBar";
 import { Menu } from "../components/Menu";
@@ -9,13 +10,14 @@ import { BrowserRouter, Switch } from "react-router-dom";
 
 class App extends Component {
   render() {
+    const {inputString} = this.props;
     return (
       <div className="app-bg">
         <BrowserRouter>
           <div>
             <NavigationBar />
             <Menu />
-            <CarouselBlock />
+            {inputString === '' && <CarouselBlock />}
             <Products />
             <Footer />
             <Switch>
@@ -31,4 +33,10 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    inputString : state.productData.search_input
+  }
+};
+
+export default connect(mapStateToProps, null)(App);

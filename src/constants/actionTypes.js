@@ -1,2 +1,3 @@
 export const JSON_DATA_RECEIVED = "JSON_DATA_RECEIVED";
 export const LOADING = "LOADING";
+export const FILTERED_DATA = "FILTERED_DATA";

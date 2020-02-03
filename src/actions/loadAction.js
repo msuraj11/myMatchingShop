@@ -6,7 +6,10 @@ export const jsonData = url => ({
 });
 
 
-export const filteredDataAction = filteredItems => ({
-  type: actionTypes.JSON_DATA_RECEIVED,
-  payload: filteredItems
+export const filteredDataAction = (filteredItems, userInput) => ({
+  type: actionTypes.FILTERED_DATA,
+  payload: {
+    filteredItems,
+    userInput
+  }
 });

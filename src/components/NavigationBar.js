@@ -13,7 +13,7 @@ const NavigationBar = (props) => {
     const filteredItems = allItems.filter(item => {
       return item.name.toLowerCase().search(userInput.toLowerCase()) !== -1;
     });
-    props.filteredData(filteredItems);
+    props.filteredData(filteredItems, userInput);
   };
 
   return (
