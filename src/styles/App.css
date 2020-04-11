@@ -24,6 +24,14 @@
   text-align: center;
 }
 
+.products, .footer {
+  overflow: hidden;
+}
+
+.no-result {
+  margin-left: 423px;
+}
+
 #fixed-nav-bar {
   padding-top: 18mm;
 }

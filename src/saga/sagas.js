@@ -4,17 +4,17 @@ import axios from "axios";
 import * as actionTypes from "../constants/actionTypes";
 
 function* productData(action) {
-  if (action.url !== "") {
+  if (action.payload !== "") {
     let responseData;
     yield axios
-      .get("https://nodesense.github.io/api/products.json")
+      .get(action.payload)
       .then(response => {
         responseData = response && response.data;
         responseData.forEach(item =>
           Object.assign(item, {
             image:
               "https://rukminim1.flixcart.com/image/832/832/jog2nbk0/mobile/e/x/b/mi-redmi-e7t-na-original-imafazxdh2bd6hep.jpeg?q=70",
-            rating: 4.4
+            rating: (Math.random()*5).toFixed(1)
           })
         );
       });
@@ -24,10 +24,10 @@ function* productData(action) {
   }
 }
 
-function* productwather() {
+function* productgather() {
   yield takeLatest(actionTypes.LOADING, productData);
 }
 
 export default function* rootSaga() {
-  yield all([call(productwather)]);
+  yield all([call(productgather)]);
 }

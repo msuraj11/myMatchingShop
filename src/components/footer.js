@@ -1,8 +1,8 @@
 import React from "react";
 
-export const Footer = props => {
+export const Footer = () => {
   return (
-    <div>
+    <div className="footer">
       <div className="row bg-dark pt-3 pb-3">
         <div className="col text-white">
           About us
