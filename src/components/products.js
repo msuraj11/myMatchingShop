@@ -22,33 +22,31 @@ class Products extends Component {
             filteredData.length > 0 ?
             filteredData.map((list, i) => {
               return (
-                <div className="col-md-3 mt-5">
-                  <div key={list.productId}>
-                    <div className="row">
-                      <div className="col-md-12">
-                        <img
-                          className=" rounded img-fluid"
-                          width="170"
-                          height="50"
-                          src={list.image}
-                          alt={list.name}
-                        />
-                      </div>
-                      <div className="col-md-12 text-dark ">
-                        <b className="text-dark"> {list.name}</b>
-                        <br />
+                <div className="col-md-3 mt-5"  key={i}>
+                  <div className="row">
+                    <div className="col-md-12">
+                      <img
+                        className=" rounded img-fluid"
+                        width="170"
+                        height="50"
+                        src={list.image}
+                        alt={list.name}
+                      />
+                    </div>
+                    <div className="col-md-12 text-dark ">
+                      <b className="text-dark"> {list.name}</b>
+                      <br />
 
-                        <b className="text-dark"> $ {list.price} </b>
-                        <br />
-                        <i className="text-dark">Rating:</i>
-                        <b className="text-dark"> {list.rating} </b>
-                        <br />
-                        <br />
-                      </div>
-                      <div className="col-md-12">
-                        <button className="btn btn-primary">Add To Cart</button>
-                        <br />
-                      </div>
+                      <b className="text-dark"> $ {list.price} </b>
+                      <br />
+                      <i className="text-dark">Rating:</i>
+                      <b className="text-dark"> {list.rating} </b>
+                      <br />
+                      <br />
+                    </div>
+                    <div className="col-md-12">
+                      <button className="btn btn-primary">Add To Cart</button>
+                      <br />
                     </div>
                   </div>
                 </div>

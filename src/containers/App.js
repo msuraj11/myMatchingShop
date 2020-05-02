@@ -4,9 +4,10 @@ import "../styles/App.css";
 import NavigationBar from "../components/NavigationBar";
 import { Menu } from "../components/Menu";
 import Products from "../components/products";
+import {Login} from "../components/login"
 import { Footer } from "../components/footer";
 import { CarouselBlock } from "../components/CarouselBlock";
-import { BrowserRouter, Switch } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 class App extends Component {
   render() {
@@ -20,11 +21,10 @@ class App extends Component {
             {inputString === '' && <CarouselBlock />}
             <Products />
             <Footer />
-            <Switch>
-              {/* 
-            <Route path="/mycart" component={MyCart} />
-            <Route path="/login" component={Login} />
-            <Route path="/signup" component={SignUp} />*/}
+            <Switch>  
+                {/* <Route path="/mycart" component={MyCart} /> */}
+                <Route path="/login" component={Login} />
+                {/* <Route path="/signup" component={SignUp} /> */}
             </Switch>
           </div>
         </BrowserRouter>

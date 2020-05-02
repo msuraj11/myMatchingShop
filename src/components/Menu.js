@@ -5,18 +5,18 @@ export const Menu = props => {
   return (
     <div id="fixed-nav-bar">
       <div className="align-baseline">
-        <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+        <nav className="navbar navbar-expand-sm bg-light navbar-dark">
           <ul className="nav nav-pills justify-content-center">
             <li className="nav-item dropdown mr-3 ml-3">
               <button
-                class="btn btn-default dropdown-toggle"
+                className="btn btn-default dropdown-toggle"
                 type="button"
                 data-toggle="dropdown"
                 data-click="dropdown"
               >
-                Mens <span class="caret" />
+                Mens <span className="caret" />
               </button>
-              <ul class="dropdown-menu">
+              <ul className="dropdown-menu">
                 <li>
                   <Link to="/Clothing">Clothing</Link>
                 </li>
@@ -25,14 +25,14 @@ export const Menu = props => {
 
             <li className="nav-item dropdown mr-3 ml-3">
               <button
-                class="btn btn-default dropdown-toggle"
+                className="btn btn-default dropdown-toggle"
                 type="button"
                 data-toggle="dropdown"
                 data-click="dropdown"
               >
-                Electronics <span class="caret" />
+                Electronics <span className="caret" />
               </button>
-              <ul class="dropdown-menu">
+              <ul className="dropdown-menu">
                 <li>
                   <Link to="/electronics">Electronics</Link>
                 </li>
@@ -41,14 +41,14 @@ export const Menu = props => {
 
             <li className="nav-item dropdown mr-3 ml-3">
               <button
-                class="btn btn-default dropdown-toggle"
+                className="btn btn-default dropdown-toggle"
                 type="button"
                 data-toggle="dropdown"
                 data-click="dropdown"
               >
-                TVs & Appliances <span class="caret" />
+                TVs & Appliances <span className="caret" />
               </button>
-              <ul class="dropdown-menu">
+              <ul className="dropdown-menu">
                 <li>
                   <Link to="/electronics">Electronics</Link>
                 </li>
@@ -57,14 +57,14 @@ export const Menu = props => {
 
             <li className="nav-item dropdown mr-3 ml-3">
               <button
-                class="btn btn-default dropdown-toggle"
+                className="btn btn-default dropdown-toggle"
                 type="button"
                 data-toggle="dropdown"
                 data-click="dropdown"
               >
-                Women <span class="caret" />
+                Women <span className="caret" />
               </button>
-              <ul class="dropdown-menu">
+              <ul className="dropdown-menu">
                 <li>
                   <Link to="/electronics">Electronics</Link>
                 </li>
@@ -73,14 +73,14 @@ export const Menu = props => {
 
             <li className="nav-item dropdown mr-3 ml-3">
               <button
-                class="btn btn-default dropdown-toggle"
+                className="btn btn-default dropdown-toggle"
                 type="button"
                 data-toggle="dropdown"
                 data-click="dropdown"
               >
-                Baby & Kids <span class="caret" />
+                Baby & Kids <span className="caret" />
               </button>
-              <ul class="dropdown-menu">
+              <ul className="dropdown-menu">
                 <li>
                   <Link to="/electronics">Electronics</Link>
                 </li>
@@ -89,14 +89,14 @@ export const Menu = props => {
 
             <li className="nav-item dropdown mr-3 ml-3">
               <button
-                class="btn btn-default dropdown-toggle"
+                className="btn btn-default dropdown-toggle"
                 type="button"
                 data-toggle="dropdown"
                 data-click="dropdown"
               >
-                Home & Furniture <span class="caret" />
+                Home & Furniture <span className="caret" />
               </button>
-              <ul class="dropdown-menu">
+              <ul className="dropdown-menu">
                 <li>
                   <Link to="/electronics">Electronics</Link>
                 </li>
@@ -105,14 +105,14 @@ export const Menu = props => {
 
             <li className="nav-item dropdown mr-3 ml-3">
               <button
-                class="btn btn-default dropdown-toggle"
+                className="btn btn-default dropdown-toggle"
                 type="button"
                 data-toggle="dropdown"
                 data-click="dropdown"
               >
-                Sports, Books & More <span class="caret" />
+                Sports, Books & More <span className="caret" />
               </button>
-              <ul class="dropdown-menu">
+              <ul className="dropdown-menu">
                 <li>
                   <Link to="/electronics">Electronics</Link>
                 </li>
@@ -121,14 +121,14 @@ export const Menu = props => {
 
             <li className="nav-item dropdown mr-3 ml-3">
               <button
-                class="btn btn-default dropdown-toggle"
+                className="btn btn-default dropdown-toggle"
                 type="button"
                 data-toggle="dropdown"
                 data-click="dropdown"
               >
-                Offers <span class="caret" />
+                Offers <span className="caret" />
               </button>
-              <ul class="dropdown-menu">
+              <ul className="dropdown-menu">
                 <li>
                   <Link to="/electronics">Electronics</Link>
                 </li>
